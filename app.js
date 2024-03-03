@@ -52,12 +52,12 @@ function renderPastPeriods() {
     return;
   }
   pastPeriodContainer.innerHTML = "";
-  pastPeriodHeader.textContent = "Past periods";
+  pastPeriodHeader.textContent = "過去の期間";
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
-    periodEl.textContent = `From ${formatDate(
+    periodEl.textContent = `${formatDate(
       period.startDate,
-    )} to ${formatDate(period.endDate)}`;
+    )} から ${formatDate(period.endDate)} まで`;
     pastPeriodList.appendChild(periodEl);
   });
 
@@ -66,8 +66,15 @@ function renderPastPeriods() {
 }
 
 function formatDate(dateString) {
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    weekday: 'short',
+    timeZone: "UTC",
+  }
   const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
+  return date.toLocaleDateString("ja-JP", options);
 }
 
 renderPastPeriods();
