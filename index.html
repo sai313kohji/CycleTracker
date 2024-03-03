@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Cycle Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="cycletracker.json" />
-    <link rel="icon" href="icons/circle.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="./cycletracker.json" />
+    <link rel="icon" href="./icons/circle.svg" />
   </head>
   <body>
     <h1>Period tracker</h1>
@@ -33,11 +33,11 @@
             <li>From 01/29/2024 to 02/04/2024</li>
         </ul> -->
     </section>
-    <script src="app.js" defer></script>
+    <script src="./app.js" defer></script>
     <!-- Register the app's service worker. -->
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
+        navigator.serviceWorker.register("./sw.js");
       }
     </script>
 
